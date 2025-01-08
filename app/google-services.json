@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "553924528735",
+    "project_id": "pam-firebase-ce675",
+    "storage_bucket": "pam-firebase-ce675.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553924528735:android:94a0890a873afc16dce9ea",
+        "android_client_info": {
+          "package_name": "com.example.pam_pert11"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvWGl9sAv8jSpZIpzlH3BnBr1mmHJq14A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

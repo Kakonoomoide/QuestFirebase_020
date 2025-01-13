@@ -111,7 +111,7 @@ fun HomeStatus(
                     onDetailClick(it)
                 },
                 onDeleteClick = {
-                    onDeleteClick(it)
+                    deleteConfirmationRequired = it
                 }
             )
 

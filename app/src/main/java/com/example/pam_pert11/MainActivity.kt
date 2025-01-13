@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.pam_pert11.ui.MahasiswaMainApp
 import com.example.pam_pert11.ui.home.pages.HomeScreen
 import com.example.pam_pert11.ui.theme.PAMpert11Theme
 
@@ -21,9 +22,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             PAMpert11Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomeScreen(
-                        modifier = Modifier.padding(innerPadding),
-                        navigateToltemEntry = {}
+                    MahasiswaMainApp(
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }

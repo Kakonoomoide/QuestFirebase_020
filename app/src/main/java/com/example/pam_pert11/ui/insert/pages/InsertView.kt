@@ -1,5 +1,6 @@
 package com.example.pam_pert11.ui.insert.pages
 
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -9,7 +10,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -87,7 +91,7 @@ fun InsertView(
             )
         }
     ) { padding ->
-        Column (
+        Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
@@ -117,8 +121,12 @@ fun InsertBodyMhs(
     onClick: () -> Unit,
     homeUiState: FormState
 ){
+    val state = rememberScrollState()
+
     Column(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier
+            .fillMaxWidth()
+            .verticalScroll(state),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
@@ -228,7 +236,7 @@ fun FormMahasiswa(
             placeholder = { Text("Masukkan Alamat") },
         )
         Text(
-            text = errorState.nim ?: "",
+            text = errorState.alamat ?: "",
             color = Color.Red
         )
 
@@ -255,19 +263,65 @@ fun FormMahasiswa(
             color = Color.Red
         )
 
+        // Angkatan
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
             value = mahasiswaEvent.angkatan,
             onValueChange = {
                 onValueChange(mahasiswaEvent.copy(angkatan = it)) },
             label = { Text("Angkatan") },
-            isError = errorState.nama != null,
+            isError = errorState.angkatan != null,
             placeholder = { Text("Masukkan Angkatan") },
             keyboardOptions = KeyboardOptions(keyboardType =
             KeyboardType.Number)
         )
         Text(
-            text = errorState.nama ?: "",
+            text = errorState.angkatan ?: "",
+            color = Color.Red
+        )
+
+        // judul skripsi
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.judulSkripsi,
+            onValueChange = {
+                onValueChange(mahasiswaEvent.copy(judulSkripsi = it)) },
+            label = { Text("Judul Skripsi") },
+            isError = errorState.judulSkripsi != null,
+            placeholder = { Text("Masukkan Judul Skripsi") },
+        )
+        Text(
+            text = errorState.judulSkripsi ?: "",
+            color = Color.Red
+        )
+
+        //dosen pembimbing 1
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.dosenPembimbing1,
+            onValueChange = {
+                onValueChange(mahasiswaEvent.copy(dosenPembimbing1 = it)) },
+            label = { Text("Dosen Pembimbing 1") },
+            isError = errorState.dosenPembimbing1 != null,
+            placeholder = { Text("Masukkan Dosen Pembimbing 1") },
+        )
+        Text(
+            text = errorState.dosenPembimbing1 ?: "",
+            color = Color.Red
+        )
+
+        //dosen pembimbing 2
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.dosenPembimbing2,
+            onValueChange = {
+                onValueChange(mahasiswaEvent.copy(dosenPembimbing2 = it)) },
+            label = { Text("Dosen Pembimbing 2") },
+            isError = errorState.dosenPembimbing2 != null,
+            placeholder = { Text("Masukkan Dosen Pembimbing 2") },
+        )
+        Text(
+            text = errorState.dosenPembimbing2 ?: "",
             color = Color.Red
         )
     }

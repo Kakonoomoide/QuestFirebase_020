@@ -26,6 +26,10 @@ fun PengelolaHalaman(
             HomeScreen(
                 navigateToItemEntry = {
                     navController.navigate(DestinasiInsert.route)
+                },
+                onDetailClick = { nim ->
+                    navController.navigate("${DestinasiDetail.route}/$nim")
+                    println("PengelolaHalaman: nim = $nim")
                 }
             )
         }

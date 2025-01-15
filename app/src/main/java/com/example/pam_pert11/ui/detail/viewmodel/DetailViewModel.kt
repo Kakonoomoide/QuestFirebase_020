@@ -53,7 +53,10 @@ fun Mahasiswa.toDetailUiEvent(): MahasiswaEvent {
         jenisKelamin = jenisKelamin,
         alamat = alamat,
         kelas = kelas,
-        angkatan = angkatan
+        angkatan = angkatan,
+        judulSkripsi = judulSkripsi,
+        dosenPembimbing1 = dosenPembimbing1,
+        dosenPembimbing2 = dosenPembimbing2
     )
 }
 

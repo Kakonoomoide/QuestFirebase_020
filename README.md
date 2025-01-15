@@ -5,7 +5,8 @@
 Insert Data
 | **Form Insert** | **Data** | **Hime page** |
 |:---:|:---:|:---:|
-|![Screenshot_1736743428](https://github.com/user-attachments/assets/dc45f006-75de-43dc-92d4-e9974d9cb6e1)|![Screenshot_1736743455](https://github.com/user-attachments/assets/47bcc59e-30d1-44d5-ab5d-2047eac8e8f5)|![Screenshot_1736743501](https://github.com/user-attachments/assets/556c402b-035e-4e41-baba-391433d1c627)|
+|![Screenshot_1736743428](https://github.com/user-attachments/assets/dc45f006-75de-43dc-92d4-e9974d9cb6e1) ![Screenshot_1736935157](https://github.com/user-attachments/assets/c94c722b-8f3c-4c5f-8a86-b5737e43e221)
+|![Screenshot_1736743455](https://github.com/user-attachments/assets/47bcc59e-30d1-44d5-ab5d-2047eac8e8f5)|![Screenshot_1736743501](https://github.com/user-attachments/assets/556c402b-035e-4e41-baba-391433d1c627)|
 
 | **Home Page** |**Delete Confirm** |
 |:---:|:---:|
